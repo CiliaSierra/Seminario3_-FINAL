@@ -35,6 +35,7 @@
                 </div>
             </div>
             <button (click)="loginUser()" type="button" class="btn btn-success float-right" [disabled]="!loginForm.valid">Login</button>
+            <button type="button" class="btn" (click)="submitLogin()">Login with facebook</button>
           </form>
         </div>
         <!--/card-block-->
