@@ -5,6 +5,7 @@ import { SpecialComponent } from './special/special.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthGuard } from './auth.guard';
+import { ChatComponent } from './chat/chat.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
   {
     path: 'register',
     component: RegisterComponent
+  },
+  {
+    path: 'chat',
+    component: ChatComponent
   }
 ];
 

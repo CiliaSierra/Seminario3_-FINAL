@@ -150,5 +150,8 @@ router.post('/register', (req, res) => {
     ]
     res.json(events)
   })
-
+  router.get('/chat', (req,res) => {
+    console.log("evento de chat")
+  })
+    
 module.exports = router;
