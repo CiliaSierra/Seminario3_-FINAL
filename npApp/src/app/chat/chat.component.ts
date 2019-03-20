@@ -48,9 +48,7 @@ export class ChatComponent implements OnInit {
         this.outputList = [];
         for (var i = 0; i <= socketlength-1; i++) {
             console.log("socket ", socket[i]);
-            this.outputList.push(socket[i]);   
-            this.dest.push(socket[i]);
-            console.log("lista de destinossssss    " + this.dest);          
+            this.outputList.push(socket[i]);             
         }      
     }.bind(this));  
   }
