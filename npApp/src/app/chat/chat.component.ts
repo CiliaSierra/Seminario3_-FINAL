@@ -58,7 +58,7 @@ export class ChatComponent implements OnInit {
 
   openForm(){
     this.visible = true;
-    console.log("VISBLE", this.visible);
+    console.log("VISIBLE", this.visible);
   }
   sendMessage(){
     console.log("name", this.name);
@@ -66,7 +66,7 @@ export class ChatComponent implements OnInit {
     this.socket.emit("chat", this.message, this.name, this.type, this.dest);
   }
   closeForm() {
-    document.getElementById("myForm").style.display = "none";
+    this.visible = false;
   }
   sendName(){
     this.socket.emit('nickname', this.name);
