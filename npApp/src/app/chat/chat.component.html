@@ -3,7 +3,7 @@
 <div>
 <p> Usuarios conectados</p>
 <p *ngFor="let socketname of outputList">
-        {{socketname}}
+     {{socketname}} 
     </p>   
 </div>         
 <button class="open-button" (click)="openForm()"><h1>Chat</h1></button>
@@ -24,11 +24,16 @@
 <div>
     <select id="type" [(ngModel)]="type">
         <option>individual</option>
-        <option>multichat</option>
+        <option selected>multichat</option>
     </select>
     <br>
-    <br>        
-    <input id="dest" type="text" placeholder="Socket destination" [(ngModel)]="dest"/>
+    <br> 
+       
+    <select id="dest" type="text" placeholder="Socket destination" [(ngModel)]="dest">
+        <option> {{this.dest[0]}}  </option>
+        <option> {{this.dest[1]}}  </option>
+        <option> {{this.dest[2]}}  </option>
+    </select>
     <br>
     <br>
 <div>

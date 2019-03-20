@@ -15,7 +15,7 @@ export class ChatComponent implements OnInit {
   socket: SocketIOClient.Socket;
   name: string;
   message: string;  
-  dest: string;
+  dest: string [] = [];
   type: string;
   outputList: string[] = [];
   visible: boolean = false;
@@ -48,7 +48,9 @@ export class ChatComponent implements OnInit {
         this.outputList = [];
         for (var i = 0; i <= socketlength-1; i++) {
             console.log("socket ", socket[i]);
-            this.outputList.push(socket[i]);            
+            this.outputList.push(socket[i]);   
+            this.dest.push(socket[i]);
+            console.log("lista de destinossssss    " + this.dest);          
         }      
     }.bind(this));  
   }
@@ -71,5 +73,6 @@ export class ChatComponent implements OnInit {
   sendName(){
     this.socket.emit('nickname', this.name);
     console.log("nickname" + this.name);
+  }
 }
-}
+
